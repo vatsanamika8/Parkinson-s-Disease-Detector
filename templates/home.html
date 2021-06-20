@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+                body
+                {
+                    margin:0;
+                    padding:0;
+                    
+                    background-size: cover;
+                    background-position: center;
+                    font-family: sans-serif;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+                    padding: 80px 20px;
+
+                }
+
+                .loginbox
+                {
+                    padding: 28px;
+                    width: 380px;
+                    height:700px;
+                    background:#000;
+                    color:#fff;
+                    top: 50%;
+                    left:50%;
+                    position:absolute;
+                    transform: translate(-50%,-50%);
+                    box-sizing: border-box;
+                }
+                
+                h1
+                {
+                    color: rgb(193, 212, 16);
+                    margin:0;
+                    padding:0 0 20px;
+                    text-align: center;
+                    font-size:26px;
+                }
+                .loginbox p
+                {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                }
+                .loginbox input[type="number"]
+                {
+                    width: 50%;
+                    margin-bottom: 2px;
+                    color:rgb(0, 0, 0);
+                    margin-bottom: 20px;
+                    text-decoration: blue;
+                }
+
+                .loginbox input
+                {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                
+                .loginbox input[type="submit"]
+                {
+                    border:none;
+                    outline:none;
+                    height:40px;
+                    background: #fb2525;
+                    color:rgb(0, 0, 0);
+                    font-size: 18px;
+                    border-radius :20px; ;
+                }
+                .loginbox input[type="submit"]:hover
+                {
+                    cursor:pointer;
+                    background:green;
+                    color: #000;
+                }
+        </style>
+
+    </head>
+    <body background="https://miro.medium.com/max/2400/0*1FeICEnOuS9nbYhp.png" >
+
+        <center>
+
+        
+        <div class="loginbox">
+        <h1> PARKINSON DETECTOR </h1><br>
+        <form method="POST", action="{{url_for('home')}}">
+           <b> MDVP:Fhi(Hz) :  <input type="number" step="any", name='a', placeholder="enter 1"> <br><br>
+            MDVP:Flo(Hz) :  <input type="number" step="any", name='b', placeholder="enter 2"> <br><br>
+            MDVP:Jitter%:  <input type="number" step="any", name='c', placeholder="enter 3"> <br><br>
+            NHR &emsp; &emsp;&emsp;&emsp;: <input type="number" step="any", name='d', placeholder="enter 4"> <br><br>
+            DFA &emsp; &emsp;&emsp;&emsp;: <input type="number" step="any", name='e', placeholder="enter 5"> <br><br>
+            spread1 &emsp; &emsp;: <input type="number" step="any", name='f', placeholder="enter 6"> <br><br>
+            spread2 &emsp; &emsp;: <input type="number" step="any", name='g', placeholder="enter 7"> <br><br>
+            D2 &emsp; &emsp;&emsp;&emsp;&ensp;: <input type="number" step="any", name='h', placeholder="enter 8"> <br><br>
+            PPE &emsp;&emsp;&emsp;&emsp;: <input type="number" step="any", name='i', placeholder="enter 9"> <br><br>
+            <br></b>
+            <input type="submit" , value='PREDICT' >
+        </form>
+        </div>
+       
+        
+    </center>
+
+    </body>
+</html>
