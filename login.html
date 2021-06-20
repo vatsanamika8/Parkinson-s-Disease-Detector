@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Login Form</title>
+    
+    <script>  
+        async function validateUser(){
+            form = document.getElementById("form");
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+            });
+            await axios.get("http://localhost:1337/Logins")
+            .then(function(response){
+                var a=1;
+                var data = response.data
+                data.forEach(d => {
+                    var email = d.email;
+                    var password = d.password;
+    
+                    console.log(email, password)
+                    if(email===form.email.value && password===form.password.value && form.user.value==="patient")
+                    {
+                        a=0;
+                            window.location.href="http://127.0.0.1:5000"
+                    }
+                     else if(email===form.email.value && password===form.password.value && form.user.value==="doctor")
+                    {
+                        a=0;
+                            window.location.href="http://127.0.0.1:5500/doctorhomepage.html"
+                    }
+                   
+                })
+                if(a==1)
+                {
+                    alert("INVALID CREDENTIALS!!!!!!!");
+                }
+                
+            })
+        }
+    
+        </script> 
+</head>
+
+
+<body>
+    
+        
+   
+    <div class="loginbox">
+
+        <img src="avatar.png"  class="avatar">
+        <div class="navbar">
+            <a href="registration.html"><i class="fa fa-fw fa-home"></i>Register</a>
+            <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+        </div>
+        <h1>Login Here</h1>
+        <form id="form" class="login_form">
+            <p>Email</p>
+            <input type="email" placeholder="Enter email" name="email" id="email" required> 
+            <p>Password</p>
+            <input type="text" placeholder="Enter password" name="password" id="password" required> 
+            <p>User Type:</p><br>
+            <input type="radio" id="patient" name="user" value="patient"required >
+                <label for="patient" style="color:orange">Patient</label>
+            <input type="radio" id="doctor" name="user" value="doctor" >
+                <label for="doctor"style="color:orange">Doctor</label><br><br>
+            <input type="submit" onclick="validateUser()" > 
+            <a href="main.html">Go back to main menu? </a><br>
+            
+        </form>
+
+    </div>
+
+</body>
+</html>

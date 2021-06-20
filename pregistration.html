@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script src="./ValidateForm.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<body>
+    
+        
+   
+    <div class="loginbox">
+        <img src="patient.png"  class="avatar">
+        <div class="navbar">
+            <a href="registration.html"><i class="fa fa-fw fa-home"></i>Doctor Register</a>
+            <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+        </div>
+        <h1>Patient Register Here</h1>
+        <form class="registration-form" id = "form" method="POST">
+                <p>Full Name</p>
+                <input type="text" placeholder="Enter name" name="name" id="name" required> 
+                <p>Gender</p>
+                <input type="text" placeholder="Enter Gender" name="gender" id="gender" required> 
+                <p>Contact Number</p>
+                <input type="tel" placeholder="Enter your contact number" name="contact" id="contact" pattern="[1-9]{1}[0-9]{9}" required>
+                <p>Age</p>
+                <input type="number" placeholder="Enter your age" min="1" max="150" id="age" required>
+                <p>Email</p>
+                <input type="email" placeholder="Enter email" name="email" id="email" required> 
+                <p>Password</p>
+                <input type="text" placeholder="Enter password" name="password" id="pwd" required>
+         <br></br>	
+         <button class="submit-button" style="cursor: pointer;" onclick="validateForm()">Submit </button>
+                
+        </form>
+
+    </div>
+
+</body>
+</html>

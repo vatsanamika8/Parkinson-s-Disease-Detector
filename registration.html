@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Doctor Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script src="./ValidateForm.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<body>
+    
+    <div class="loginbox">
+        <img src="doctor avatar.png"  class="avatar">
+        <div class="navbar">
+            
+			<a href="pregistration.html"><i class="fa fa-fw fa-home"></i>Patient Register</a>
+            <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+        </div>
+        
+        <h1><center>Doctors Register Here</center></h1>
+        <form class="registration-form" id = "form"  method="POST">
+		    <p>Full Name</p>
+			<input type="text" placeholder="Enter name" name="name" id="name" required> 
+			<p>Doctor Registration Number</p>   
+			<input type="text" placeholder="Enter your register number" name="regno" required>
+			<p>Year of Registration</p>
+            <input type="number" placeholder="Enter year in YYYY format" min="1900" max="2021" required>
+			<p>Gender</p>
+			<input type="text" placeholder="Enter Gender" name="gender" id="gender" required> 
+			<p>Contact Number</p>
+			<input type="tel" placeholder="Enter your contact number" name="contact" id="contact" pattern="[1-9]{1}[0-9]{9}" required> 
+            <p>Email</p>
+            <input type="email" placeholder="Enter email" name="email" id="email" required> 
+            <p>Password</p>
+            <input type="text" placeholder="Enter password" name="password" id="pwd" required> 
+            <button class="submit-button" style="cursor: pointer;" onclick="validateForm()">Submit </button>
+            
+        </form>
+
+    </div>
+
+</body>
+</html>

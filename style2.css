@@ -1,0 +1,145 @@
+body
+{
+    margin:0;
+    padding:0;
+    background: url(pdd.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 80px 20px;
+
+}
+
+.navbar a 
+{
+    float:right;
+    text-align: right;
+    padding: 10px;
+    color: black;
+    text-decoration:rgb(241, 44, 44);
+    font-size: 300px;
+    background-color: rgb(36, 25, 61);
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: rgb(122, 45, 45);
+    color: rgb(83, 13, 13);
+  }
+
+
+.loginbox
+{
+    padding: 28px;
+    width: 380px;
+    height:590px;
+    background:#000;
+    color:#fff;
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+.avatar
+{
+    width: 90px;
+    height:90px;
+    border-radius: 40%;
+    position: absolute;
+    top: -30px;
+    left: calc(40%-10px);
+}
+h1
+{
+    margin:0;
+    padding:0 0 20px;
+    text-align: center;
+    font-size:22px;
+}
+.loginbox p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+
+.loginbox input
+{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.loginbox input[type="email"],input[type="password"],input[type="enter password"],input[type="text"],input[type="tel"],input[type="number"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background:transparent;
+    outline: none;
+    height: 40px;
+    color:#fff;
+    font-size: 16px;
+}
+
+
+.loginbox input[type="submit"]
+{
+    border:none;
+    outline:none;
+    height:40px;
+    background: #fb2525;
+    color:#fff;
+    font-size: 16px;
+    border-radius :20px; ;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor:pointer;
+    background:green;
+    color: #000;
+}
+.submit-button:hover
+{
+    cursor:pointer;
+    background:green;
+    color: #000;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.submit-button
+{
+    border:none;
+    outline:none;
+    height:40px;
+    background: #fb2525;
+    color:#fff;
+    font-size: 16px;
+    border-radius :20px; ;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.loginbox a
+{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 12px;
+    color:orange;
+    
+
+}
+.loginbox a:hover
+{
+    color:#ffc107;
+}
+
+.navbar 
+{
+    width: 80%;
+    background-color: rgba(85,85,85,0.1);
+    overflow: auto;
+  }
